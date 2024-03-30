@@ -1,3 +1,8 @@
+/**
+ * Gestiona cada una de las jugadas o turnos dentro del juego.
+ * @author Liberto
+ * @version 1.0
+ */
 public class Jugada {
     /*static int totalPiedra;
     static int totalTijera;
@@ -7,14 +12,8 @@ public class Jugada {
     static int TurnosHastaTijera;
     de cara a posibles ampliaciones para poder llevar la estadística
      */
-    /**
-     * Gestiona cada una de las jugadas o turnos dentro del juego.
-     * @author Liberto
-     * @version 1.0
-     */
     int jugadaHecha1;
     int jugadaHecha2;
-
     /**
      * Constructor de la clase
      * @see Menu
