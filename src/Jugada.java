@@ -14,7 +14,6 @@ public class Jugada {
         this.jugadaHecha1 = jugadaHecha1;
         this.jugadaHecha2 = jugadaHecha2;
     }
-    // TODO: 30/03/2024
     public int resolver(){
         if (this.jugadaHecha1==jugadaHecha2){
             return 0;
