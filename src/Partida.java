@@ -1,29 +1,39 @@
-public class Partida {
-    static int puntuacionJugador1;
-    static int puntuacionJugador2;
-    static int turnosTotales;
-    public static void jugar(){
-        turnosTotales++;
-        int eleccion1;
-        int eleccion2;
-        Jugada jugada1;
-        Jugada jugada2;
+import java.util.Random;
 
-        // TODO: 29/03/2024 Jugada--->clase abstracta que tiene como concretas"piedra papel o tijera 
+public class Partida {
+    int puntuacionJugador1;
+    int puntuacionJugador2;
+    static int contadorTurnos=0;
+    final int turnosTotales;
+    Jugada jugada;
+    public Partida(int turnosTotales) {
+        this.turnosTotales=turnosTotales;
+        puntuacionJugador1=0;
+        puntuacionJugador2=0;
+    }
+
+    public void jugar(){
         do {
-            System.out.println("Jugador1");
-            System.out.println("Para jugar piedra introduce un 1");
-            System.out.println("Para jugar papel introduce un 2");
-            System.out.println("Para jugar tijeras introduce un 3");
-        }while(eleccion1 != 0 && eleccion1 != 1 && eleccion1 != 2);
-        // TODO: 29/03/2024 añadir constructor y la opcion de pasar por teclado
-        do {
-            System.out.println("Jugador2");
-            System.out.println("Para jugar piedra introduce un 1");
-            System.out.println("Para jugar papel introduce un 2");
-            System.out.println("Para jugar tijeras introduce un 3");
-        }while(eleccion2 != 0 && eleccion2 != 1 && eleccion2 != 2);
-        
+            int eleccion1;
+            int eleccion2;
+
+
+            do {
+                eleccion1=Menu.mostrarMenuJuagada(1);
+            } while (eleccion1 != 1 || eleccion1 != 2 || eleccion1 != 3);
+
+            do {
+
+                eleccion2= Menu.mostrarMenuJuagada(2);
+            } while (eleccion2 != 1 || eleccion2 != 2 || eleccion2 != 3);
+            jugada= new Jugada(eleccion1,eleccion2);
+            if (jugada.resolver()==1){
+                this.puntuacionJugador1++;
+            }else{
+                this.puntuacionJugador2++;
+            }
+            contadorTurnos++;
+        }while(turnosTotales<=contadorTurnos);
         
     }
 }

@@ -7,13 +7,13 @@ public class Main {
         int condicion;
         Scanner teclado=new Scanner(System.in);
         do {
-            condicion = Menu.mostrar(teclado);
+            condicion = Menu.mostrarConSalida(teclado);
             if (condicion==1) {
-                Partida.jugar();
-            } else if (condicion==2) {
-                Menu.estadisticas();
+                System.out.println("¿Cuántos turnos quieres jugar?");
+                int turnosTotales=teclado.nextInt();
+                Partida partida1=new Partida(turnosTotales);
+                partida1.jugar();
             }
-
         }while(condicion!=0);
     }
 }
