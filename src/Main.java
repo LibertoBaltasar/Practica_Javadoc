@@ -1,8 +1,13 @@
 import java.util.Scanner;
-
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+/**
+ * Clase principal que ejecuta el juego.
+ * @author Liberto
+ * @version 1.0
+ */
 public class Main {
+    /**
+     * Método principal que ejecuta el juego.
+     */
     public static void main(String[] args) {
         int condicion;
         Scanner teclado=new Scanner(System.in);

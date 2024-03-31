@@ -1,7 +1,5 @@
 /**
- * Gestiona cada una de las jugadas o turnos dentro del juego.
- * @author Liberto
- * @version 1.0
+ * Clase que representa un turno de piedra, papel o tijera
  */
 public class Jugada {
     /*static int totalPiedra;
@@ -26,7 +24,7 @@ public class Jugada {
     }
 
     /**
-     *
+     *Resuelve la jugada y determina quién ha ganado
      * @return Valor entero que determina quién ha ganado la jugada: 1-->jugador1; 2-->jugador2; 0-->empate
      */
     public int resolver(){
